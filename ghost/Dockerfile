@@ -6,11 +6,10 @@ FROM ghost:3.35
 # Set environment variables.
 ENV NODE_ENV development
 
-# Define working directory.
-WORKDIR /var/lib/ghost
+USER node:node
 
-# Define default command.
-# CMD ["ghost", "start"]
+# Define working directory.
+WORKDIR /var/lib/ghost/content
 
 # Expose ports.
 EXPOSE 2368
